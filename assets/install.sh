@@ -55,9 +55,10 @@ export PATH="$(pwd)"/assets/$MyPortableJulia/bin:$PATH
 export PATH="$(pwd)"/assets/PortableGit/bin:$PATH
 
 # Download, and instantiate the tutorial packages, in order to bring Julia depot up-to-date 
-if [ ! -d RunVibrationExample.jl ] ; then
+userpackage=RunVibrationExample.jl
+if [ ! -d $userpackage ] ; then
     echo "Activating/instantiating a package"
-    for n in RunVibrationExample.jl
+    for n in $userpackage
     do 
         if [ ! -d $n ] ; then
             echo "Activating and instantiating $n"
@@ -137,4 +138,4 @@ fi
 
 # Start VS Code
 echo "Starting editor"
-assets/VSCode/Code -a RunVibrationExample.jl
+assets/VSCode/Code -a $userpackage
