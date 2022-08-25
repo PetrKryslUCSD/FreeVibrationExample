@@ -1,5 +1,6 @@
 # Free Vibration Example
 
+Download the repository as a zip. Unzip the folder.
 Double-click the batch file(`DOUBLE_CLICK_ME.bat`): everything installs itself,
 and VS code pops up preconfigured for work with Julia. 
 
